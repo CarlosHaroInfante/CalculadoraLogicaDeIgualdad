@@ -22,7 +22,7 @@ namespace CalculadoraLogicaDeIgualdad.Servicios
         /// 131023 - chi
         /// </summary>
 
-        public void calculadora();
+        public int calculadora();
 
     }
 }

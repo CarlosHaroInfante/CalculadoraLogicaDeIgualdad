@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculadoraLogicaDeIgualdad.Servicios
 {
-    internal class MenuImplementacion : MenuInterfaz //conecto los servicios
+    internal class MenuImplementacion : MenuInterfaz  //conecto los servicios
     {
         //mensaje de Bienvenida
 
@@ -18,7 +18,7 @@ namespace CalculadoraLogicaDeIgualdad.Servicios
 
         //Menú de la calculadora
 
-        public void calculadora()
+        public int calculadora()
         {
             int opcionElegida;
 
@@ -30,6 +30,8 @@ namespace CalculadoraLogicaDeIgualdad.Servicios
             Console.WriteLine("------------------------------------");
             Console.WriteLine("Seleccione una opcion: ");
 
+            opcionElegida = Console.ReadKey(true).KeyChar - ('0'); //Lee un caracter y lo muestra por pantalla
+            return opcionElegida;
 
         }
     }

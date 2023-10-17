@@ -13,7 +13,7 @@ class Program
     /// 131023 - chi
     /// </summary>
 
-    public void Main(string[] args)
+    static void Main(string[] args)
     {
         MenuInterfaz hola = new MenuImplementacion();
         hola.mensaje();
@@ -35,7 +35,7 @@ class Program
             opcionElegida = hola.calculadora();
             Console.WriteLine(opcionElegida);
 
-            string opcion1, opcion2, resultado;
+            string opcion1, opcion2;
 
 
             switch (opcionElegida)
@@ -49,23 +49,23 @@ class Program
                 case 1:
                     Console.WriteLine("[INFO] - Se igualará");
                     Console.WriteLine("Escoge una palabra");
+                    opcion1 = Console.ReadLine();
                     Console.WriteLine("Has elegido: " + opcion1);
                     Console.WriteLine("Escoge otra palabra");
-                    opcion2 = Parse(Console.ReadLine());
+                    opcion2 = Console.ReadLine();
                     Console.WriteLine("Has elegido: " + opcion2);
                     Console.WriteLine(opcion1 == opcion2);
                     break;
 
                 case 2:
                     Console.WriteLine("[INFO] - Se desigualará");
-                    Console.WriteLine("Escoge un número");
-                    opcion1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Escoge una palabra");
+                    opcion1 = Console.ReadLine();
                     Console.WriteLine("Has elegido: " + opcion1);
-                    Console.WriteLine("Escoge otro número");
-                    opcion2 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Escoge otra palabra");
+                    opcion2 = Console.ReadLine();
                     Console.WriteLine("Has elegido: " + opcion2);
-                    resultado = opcion1 - opcion2;
-                    Console.WriteLine("El resultado es: " + resultado);
+                    Console.WriteLine(opcion1 != opcion2);
                     break;
 
                 default:
